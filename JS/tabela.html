@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tabela</title>
+	<style >
+		.zebrada{background: silver;}
+	</style>
+</head>
+
+
+<body>
+	<table class="zebra">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Fone</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Ricardo</th>
+				<th>32545748</th>
+			</tr>
+			<tr>
+				<th>Maria</th>
+				<th>35961448</th>
+			</tr>
+			<tr>
+				<th>Kacio</th>
+				<th>98112348</th>
+			</tr>
+			<tr>
+				<th>Esther</th>
+				<th>98456172</th>
+			</tr>
+			<tr>
+				<th>Mario</th>
+				<th>32545748</th>
+			</tr>
+			<tr>
+				<th>Thiago</th>
+				<th>98647510</th>
+			</tr>
+
+		</tbody>
+
+
+
+
+
+	</table>
+	<script >
+		window.onload = function(){
+			var zebrar = document.querySelectorAll('.zebra tbody tr');
+			for(var i =0;i<zebrar.length;i+=2){
+				zebrar[i].className = 'zebrada';
+			}
+		}
+
+		console.log(window);
+	</script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,35 @@
+
+body{
+	background-image: URL("universo.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 1%;
+}
+
+
+a{
+	color: green;
+	text-decoration: none;
+	font-size: 30px;
+}
+
+
+#Link_novaGuia{
+	color: blue;
+	text-decoration: none;
+	font-size: 30px;
+
+ }
+ .class_verde{
+ 	color: green;
+	text-decoration: none;
+	font-size: 30px;
+
+ }
+ .class_amarelo{
+ 	color: yellow;
+	text-decoration: none;
+	font-size: 30px;
+
+ }

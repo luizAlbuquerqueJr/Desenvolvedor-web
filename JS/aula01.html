@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Aula 01-JS
+	</title>
+</head>
+<body>
+
+	<script src="js/aula01.js"></script>
+
+	<script>
+		var nome = 'luiz', idade = 20,cpf = 235145785125;
+		var cor = 'vermelhor'; 
+		var formacao = ['eletronica', 'EC', 'JS','html','CSS']
+		
+
+		var pessoa = {nome: 'Luiz',idade: 30,casado: false};
+
+		console.log('formaçao:' + formacao);  
+		console.log('formacao[3]: ' + formacao[3]);
+		console.log('Bom dia '+ pessoa.nome+' e sua idade é '+pessoa.idade+ ' e vc é casado? ' +pessoa.casado);
+
+
+		//É permitido recriar uma variável---CUIDADO!!!
+		var valor = 80.00;
+		var aumento = 50;
+		var valor = 15;
+		console.log(valor + aumento); 
+		///
+
+
+		//fuction
+
+		function alerta(msg) {
+			alert(msg);
+			// body...
+		}
+		function dividir( x, por =2){
+			return x/por;
+		}
+		//alerta('O resultado da divisao sem informar o segundo parametro é: ' + dividir(30));
+		//alerta('O resultado da divisao informando todos os parametros é: ' + dividir(30,3));
+		
+
+		//objeto e array
+		var fruta = ['laranja','acerola','manga','abacate'];
+		
+		fruta.reverse();
+		console.log('Ordem inversa:' + fruta);
+
+		fruta.push('nova fruta')
+		console.log('Ordem inversa acrescentada:' + fruta);
+
+		fruta.pop();//elimina ultima do array
+		console.log('Ordem inversa acrescentada e tirada uma fruta:' + fruta);
+
+		fruta.sort();
+		console.log('Ordem alfabética:' + fruta);
+
+		fruta.shift();//remove primeiro item do array
+		console.log('Ordem alfabética menos o peimrio item:' + fruta);
+
+		fruta.unshift('nova fruta');//add no primeiro item do array
+		console.log('Ordem alfabética menos o peimrio item:' + fruta);
+		
+		//array
+		var pessoa = {
+			nome:'luiz',
+			idade: 18,
+			x: 50,
+			andar: function(pos){
+				x = x + pos;
+			}
+
+		}
+
+
+		//textos
+
+		var txt = 'Pegou fogo na caixa d\'água';
+		var txt = 'Para aprender mais sobre Js pesquise na Google. Lá irá aprender bastante coisa';
+		
+		var tamanho = txt.length;
+		var primeiraOcorrencia = txt.indexOf('aprender');
+		var ultimaOcorrencia = txt.lastIndexOf('aprender');
+		 var parteString = txt.slice(5,18);//pos inicia e pos final
+ 		var parteString = txt.substring(5,18);//pos inicia e pos final
+ 		var parteString = txt.substr(5,13)//pos inicial e tamanho
+ 		var substituirPalavra = txt.replace('Google','YouTube'); 
+
+ 		var Maiscula = txt.toUpperCase();
+ 		var Minuscula = txt.toLowerCase();
+
+
+ 		//numeros
+
+ 		var numero = 912.1936987458;
+ 		console.log(numero);
+ 		console.log(numero.toFixed(3));//numero apos a virgula Usa arrendodamento
+ 		console.log(numero.toPrecision(4));//numero totais -Usa arrendodamento
+
+ 		//Data
+ 		var d = new Date();
+ 		//var d = new Date(ano, mes, dia, hora, minuto,segundo, milissegundo);
+ 		console.log(d);
+ 		console.log(d.toUTCString());
+ 		console.log(d.toDateString());
+ 		console.log('getDate ' + d.getDate());
+ 		console.log('getDay ' + d.getDay());
+ 		console.log('getFullYear ' + d.getFullYear());
+ 		console.log('getHours ' + d.getHours());
+ 		console.log('getMiliseconds ' + d.getMilliseconds());
+ 		console.log('getMinutes ' + d.getMinutes());
+ 		console.log('getMonth ' + d.getMonth());//começa do mes zero
+ 		console.log('getSeconds ' + d.getSeconds());
+ 		console.log('gettime ' + d.getTime());
+
+ 		function formatData(data = new Date()){
+ 			var dia = data.getDate();
+ 			var mes = data.getMonth();
+ 			var ano = data.getFullYear();
+
+ 			if(dia.toString().length == 1) dia = '0'+dia;
+ 			if(mes.toString().length == 1) mes = '0'+mes;
+ 			
+ 			return dia+'/'+mes+'/'+ano;
+ 		}
+
+ 		 console.log(formatData());
+
+
+ 		 //For,If e todo o resto é igual a C
+
+
+
+
+
+	</script>
+
+	<p>Informe um numero entre 10 e 20:</p>
+	<input type="text" id="numero">
+	<button onclick="verificar()"> Verificar</button>
+	<p id ='msg'></p>
+
+	<script>
+		function verificar(){
+
+			try{
+				var x = document.getElementById('numero').value;
+				if( x == '') throw 'Informe um valor';
+				if(isNaN(x)) throw 'Voce precisa informar um numero';
+
+
+				x = Number(x);
+				if(x < 10 || x>20) throw 'Informe um valor entre 10 e 20';
+
+
+
+	 			document.getElementById('msg').innerHTML = 'Perfeito numero' + x+' está correto.'
+	 		}catch(erro){
+	 			document.getElementById('msg').innerHTML = 'Erro:' + erro
+	 		}finally{
+	 			document.getElementByID('numero').value = '';
+	 		}	
+
+		}
+
+	 
+
+
+	</script>
+
+
+	<!-- DOM -->
+	<p id ="demo"></p>
+	<p class = "exemplo"></p>
+	<p class = "exemplo", onmouseover = "funcao1(demo)", onmouseout = "funcao2(demo)"></p>
+	<p class = "exemplo", onclick="mudaCor(this)"></p>
+	<p class = "exemplo", onclick = "this.innerHTML = 'Obrigado!'"></p>
+	<img id ='imagem' ,src="imagem.jpg">
+	<script>
+		document.getElementById("demo").innerHTML = 'Texto do meu paragrafo'
+		console.log(document.getElementsByTagName('p'));
+		console.log(document.getElementsByClassName('exemplo'));
+
+		var x = document.getElementsByClassName('exemplo');
+		x[0].innerHTML = 'Texto zero'
+		x[1].innerHTML = 'Passe o mouse aqui'
+		x[2].innerHTML = 'clique aqui e veja oq acontece'
+		x[3].innerHTML = 'Clique aqui'
+
+		//escrevendo via script
+		document.write('Escrevendo via script');
+		//modificando atributos
+		x[1].style.maxWidth= '100px';
+		document.getElementById("imagem").src = 'ufpe.png';
+		document.getElementById("demo").style.color="red";
+
+		document.getElementById("demo").style.visibility='hidden';
+		
+		document.getElementById("demo").style.visibility='visible';
+		var a=0;
+		//Eventos
+		function mudaCor(x){
+			//x.style.visibility='hidden';
+			a++;
+			if(a%2==1) x.style.color='red';
+			 else x.style.color ='blue';
+		}
+
+		function funcao1(x){
+			//x.style.visibility='hidden';
+			x.style.color='blue';
+		}
+		function funcao2(x){
+			//x.style.visibility='hidden';
+			x.style.color='green';
+		}
+
+	</script>
+
+ 		
+<!--
+	<script>
+		alert("Esse é meu primeiro codigo js");
+	</script>
+-->
+</body>
+</html>

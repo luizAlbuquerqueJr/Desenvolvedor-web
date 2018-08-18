@@ -1,0 +1,27 @@
+h1{
+	color:orange;/* cor da fonte*/
+	letter-spacing: -1px;/* espaço entre as letras*/
+
+	text-transform: uppercase;/* transforma tudo em maiuscula*/
+	text-transform: capitalize;/* primeira letra maiuscula em todas as palavras*/
+
+	width: 650px;
+
+	text-shadow: 1px 1px black;/*colocar sombra*/
+}
+
+p{
+	text-indent: 50px;/*Recuo de primeira linha*/
+	width: 650px;/*largura maxima do paragrafo*/
+	
+	text-align: right;
+	text-align: center;
+	text-align: justify;
+
+
+	padding-left: 100px;
+
+	font-size: 18px;/*tamanho da fonte*/
+	font-family: verdana,arial;
+}
+

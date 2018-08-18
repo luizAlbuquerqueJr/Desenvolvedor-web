@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+
+		
+			
+		<link rel="shortcut icon" type="image/x-icon" href="imgs/logo.png"/>
+
+		<meta charset="utf-8"/>
+		<title>Golden</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+
+
+	</head>
+
+	<body>
+		<div class="abc">
+		<div class="header">
+			<div class="linha">
+				<header>
+					<div class="coluna col3">
+						<h1 class="logo"><img src="imgs/logo1.png"/></h1>
+						
+
+						
+						<script src="https://www.google.com/recaptcha/api.js?hl=pt-BR&amp;onload=onloadCallback&amp;render=explicit" async="" defer="">
+						</script>
+
+
+						 
+
+						
+
+					</div>
+
+					<div class="coluna col9">
+						<nav>
+							<ul class="menu inline sem-marcador">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="clientes.html">Equipe de Professores</a></li>
+								<li><a href="servicos.html">Serviços</a></li>
+								<li><a href="contatos.html">Contatos</a></li>
+								<li><a href="dieta.html">IMC</a></li>
+							</ul>
+						</nav>
+					</div>
+						<div class="coluna col9">
+						<P id="stringHora"></P>
+						<script>
+								        hoje = new Date()
+								        dia = hoje.getDate()
+								        dias = hoje.getDay()
+								        mes = hoje.getMonth()
+								        ano = hoje.getYear()
+
+								        hora = hoje.getHours()
+								        minuto = hoje.getMinutes()
+
+								        if (dia < 10)
+								                dia = "0" + dia
+								        if (ano < 2000)
+								                ano = 1900 + ano
+								        function CriaArray (n) {this.length = n }
+								        NomeDia = new CriaArray(7)
+								        NomeDia[0] = "Domingo"
+								        NomeDia[1] = "Segunda-feira"
+								        NomeDia[2] = "Terça-feira"
+								        NomeDia[3] = "Quarta-feira"
+								        NomeDia[4] = "Quinta-feira"
+								        NomeDia[5] = "Sexta-feira"
+								        NomeDia[6] = "Sábado"
+								        //
+								        NomeMes = new CriaArray(12)
+								        NomeMes[0] = "Janeiro"
+								        NomeMes[1] = "Fevereiro"
+								        NomeMes[2] = "Março"
+								        NomeMes[3] = "Abril"
+								        NomeMes[4] = "Maio"
+								        NomeMes[5] = "Junho"
+								        NomeMes[6] = "Julho"
+								        NomeMes[7] = "Agosto"
+								        NomeMes[8] = "Setembro"
+								        NomeMes[9] = "Outubro"
+								        NomeMes[10] = "Novembro"
+								        NomeMes[11] = "Dezembro"
+								       
+							//	        document.write ("<font color='black'  face='Arial' size=4 >"+hora+":"+minuto+ " </font>")
+										document.getElementById('stringHora').innerHTML = NomeDia[dias] + ", " + dia + " de " + NomeMes[mes] + " de " + ano;
+										document.getElementById("stringHora").style.color="black";
+										
+
+							 </script>						
+					 </div>
+
+
+
+				</header>
+			</div>
+		</div>
+
+		<div class="linha">
+			<section>
+				<div class="coluna col3 sidebar">
+					<h3>Empresas parceiras</h3>
+					<ul class="sem-marcador sem-padding">
+						<li><a href="index.html">Whey life</a></li>
+						<li><a href="index.html">optimum nutrition</a></li>
+						
+					</ul>
+					<a href="index.html.html" class="botao">Ver todos  &raquo; </a>
+				</div>
+
+				<div class="coluna col9">
+					<h2><em>Golden Fit</em></h2>
+					<img src="" alt=""/>
+					
+					<p>
+					Após a Segunda Guerra Mundial, os Estados Unidos se consolidaram como o centro do fisiculturismo no mundo. Durante os verões da década de 1940, uma praia da Califórnia, Santa Monica, começou a ser cada vez mais freqüentada por fisiculturistas que durante o verão se aglomeravam diante da multidão de banhistas para praticar seus exercícios com os pesos livres colocados à vista do público. Esta espécie de exibicionismo muscular ficou tão famosa que recebeu o nome de Muscle Beach. Um dos freqüentadores desta praia, aficionado por pesos e músculos, era o jovem Joseph Gold, um adolescente filho de imigrantes russos. Anos mais tarde, em pleno outono de 1965, ele resolveu abrir uma modesta academia de musculação na região, localizada na badalada praia de Venice, próximo a Los Angeles, a qual batizou de GOLD’S GYM. A academia, um grande e rude galpão com luminárias sujas e cheio de equipamentos de musculação desenvolvidos e feitos pelo próprio Joe Gold, onde os fisiculturistas podiam malhar e trocar experiências com atletas e praticantes mais experientes, acabou por se tornar uma espécie de Meca dos fisiculturistas e modelo para as outras academias que vieram a se espalhar pelo mundo</p>
+					<a href="clientes.html" class="botao">Ver outros trabalhos &raquo;</a>
+
+				</div>
+
+			</section>
+
+		</div>
+		<div class="conteudo-extra">
+			<div class="linha">
+				<div class="coluna col7">
+					<section>
+						 <h2>Sobre o site</h2>
+						 <p>Um site desenvolvido por Luiz Albuquerque cuja finalidade é apenas didática</p>
+						 
+					</section>
+
+				</div>
+				<div class="coluna col5">
+					<h3>Ultimas noticias</h3>
+					<ul class="sem-marcador sem-padding noticias">
+						<li>
+							<div class="asd">
+								<h4>Campeaonato de supino</h4>
+								<p><img src="imgs/camp.png"/><em>Ocorreu o primeiro campeonato de supino onde o objetivo era fazer o máximo de repetiçao...</em> <a href="https://www.facebook.com/goldenfitacademia.com.br/videos/1640524699395107/">Veja mais</a></p>
+							</div>
+						</li>
+						<li>
+							<div class="asd">
+								<h4>Campeaonato de supino</h4>
+								<p><img src="imgs/camp.png"/><em>Ocorreu o primeiro campeonato de supino onde o objetivo era fazer o máximo de repetiçao...</em> <a href="https://www.facebook.com/goldenfitacademia.com.br/videos/1640524699395107/">Veja mais</a></p>
+							</div>
+						</li>
+						<li>
+							<div class="asd">
+								<h4>Campeaonato de supino</h4>
+								<p><img src="imgs/camp.png"/><em>Ocorreu o primeiro campeonato de supino onde o objetivo era fazer o máximo de repetiçao...</em> <a href="https://www.facebook.com/goldenfitacademia.com.br/videos/1640524699395107/">Veja mais</a></p>
+							</div>
+						</li>
+
+					</ul>
+				</div>	
+
+			</div>
+		</div>
+	</div>
+		<div class="footer">
+			<div class="linha">
+				<footer>
+					<div class="coluna col10">
+						<span>&copy; 2018-Academia Golden</span>
+					</div>
+
+				</footer>
+			</div>
+		</div>
+	</body>
+
+
+</html>

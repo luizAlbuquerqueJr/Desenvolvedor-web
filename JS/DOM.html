@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DOM</title>
+</head>
+<body>
+
+
+	
+	<h1>Aperte em cadastrar</h1>
+	<P id="frase"></P>
+	<P id="frase2"></P>
+
+	<input type="button" value="Voltar" onclick="window.history.back();"/>
+	<input type="button" value="Avançar" onclick="window.history.foward();"/>
+	<input type="button" value="Cadastrar" onclik="clearInterval(gmsg)"/>
+
+	<div id="msg"></div>
+	<script>
+		window.localStorage.setItem('nome','Ricardo');//os dados sao salvos permanentementes
+		window.sessionStorage.setItem('nome2','Luiz');//os dados sao apagados qnd o navegador é fechado
+		document.getElementById('msg').innerHTML = window.localStorage.getItem('nome');
+
+		var msg1 = setTimeout(escreve,2000);
+		var gmsg = setInterval(msgInterval,1000);
+
+		function escreve(){
+			document.getElementById('frase').innerHTML = "aperte em cadastrar logo!"
+
+			 
+		}
+		var tam =10;
+
+		function msgInterval(){
+
+			if(tam<100)tam+=2;
+			var mensagem = document.getElementById('frase2')
+			mensagem.innerHTML = "aperte em cadastrar"
+			mensagem.style.fontSize = tam.toString()+'px';
+		}
+
+	</script>
+
+
+
+
+
+</body>
+</html>
